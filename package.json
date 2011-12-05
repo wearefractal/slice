@@ -10,6 +10,11 @@
    "engines":{
       "node":">= 0.4.0"
    },
+    
+   "devDependencies":{
+      "should":"*"
+   },
+
    "licenses":[
       {
          "type":"MIT",

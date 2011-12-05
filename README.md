@@ -1,3 +1,6 @@
-_Slice_ is a naked library that can be Decorated with submodules which will provide additional functionality for your application
+_Slice_ is a naked library that can mix-in submodules which provide additional functionality for your application
 
-_Slice_ is the standard class library for **rzr**
+Slice creates a  _standard class library_ for your application based on **environments** such as 'production' and 'development'
+
+
+Slice is used in **rzr**
