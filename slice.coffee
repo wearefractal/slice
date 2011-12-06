@@ -1,16 +1,16 @@
+#factor out to build system
+ENVIRONMENT  = require('./config/config').ENVIRONEMENT
+environments = require './config/environments'
+
+#mixinModules = (modules) -> return {made: true}
 mixinModules = require './services/mixinModules'
-getConfig = require './services/getConfig'
 
 Slice = ->
 
-#  slice = {}
-  console.log 'constructing'
+  config = environments[ENVIRONMENT] ? environments['production']
+  modules = config.modules  
 
-  getConfig '..', (config) ->
-    console.log 'got config'
-    mixinModules config.modules, (newSlice) ->
-      console.log "new slice"
-      return newSlice
+  mixinModules modules, (slice) -> return slice
 
 
-module.exports = new Slice()
+module.exports = Slice()

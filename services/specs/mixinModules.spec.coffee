@@ -1,17 +1,18 @@
-#>> Given 
+#>> Setup 
 
 should = require 'should'
 mixinModules = require '../mixinModules'
 
-#>> When i get the congiuration for an environment
+#>> Given some modules
 
-getConfigForEnvironment '../..', 'production', (config) ->  
-      
+modules = ['should']
+
+#>> When I pass in some modules
+
+slice = mixinModules modules
+
 #>> Then 
 
-  config.should.be.ok
-
-#>> And
+slice.should.have.property 'ok' # from should
     
-  config.should.have.property 'modules'
 

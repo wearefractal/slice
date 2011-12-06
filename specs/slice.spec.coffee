@@ -6,9 +6,15 @@ should = require 'should'
 
 slice = require '../slice'
 
-console.log slice
 #>> Then
 
+slice.should.have.property 'ok'
+slice = ''
 
-#slice.should.have.property 'load'
+#>> When I set the global ENV var
 
+global['RZR.ENV'] = 'spex.unit'
+
+slice = require '../slice'
+
+slice.should.have.property 'ok'

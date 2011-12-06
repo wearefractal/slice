@@ -1,11 +1,8 @@
-mixinModule = (modules) ->
-  slice = {}
+extend = require('extenze').extend
 
-  for mod in modules    
-    mod = require mod
-    slice[name] = property for name, property of mod
+mixinModules = (modules) ->
 
-  return slice
+  return slice = extend {}, require( mod ) for mod in modules
 
 
-module.exports = mixinModule
+module.exports = mixinModules
