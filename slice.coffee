@@ -1,6 +1,7 @@
 #factor ENV checks out to build system
-ENVIRONMENT  = require('../config/config').ENVIRONEMENT
-environments = require '../config/environments'
+ENVIRONMENT  = require('../../config/config').ENVIRONEMENT
+environments = require '../../config/environments'
+
 #mixinModules = (modules) -> return {made: true}
 mixinModules = require './services/mixinModules'
 

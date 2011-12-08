@@ -10,6 +10,9 @@
    "engines":{
       "node":">= 0.4.0"
    },
+   "dependencies": {
+      "extenze":"*"
+   },
     
    "devDependencies":{
       "should":"*"
