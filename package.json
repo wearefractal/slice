@@ -16,7 +16,8 @@
    },
     
    "devDependencies":{
-      "should":"*"
+      "should":"*",
+      "useless":"*"
    },
 
    "licenses":[
