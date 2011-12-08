@@ -1,3 +1,4 @@
+require('coffee-script');
 mixinModules = require './services/mixinModules'
 
 Slice = ->
