@@ -3,4 +3,4 @@ _Slice_ is a naked library that can mix-in submodules which provide additional f
 Slice creates a  _standard class library_ for your application based on **environments** such as 'production' and 'development'
 
 
-Slice is used in **rzr**
+Slice is used with **rzr**

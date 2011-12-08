@@ -5,7 +5,7 @@ mixinModules = require '../mixinModules'
 
 #>> Given some modules
 
-modules = ['should']
+modules = ['useless']
 
 #>> When I pass in some modules
 
@@ -13,6 +13,4 @@ slice = mixinModules modules
 
 #>> Then 
 
-slice.should.have.property 'ok' # from should
-    
-
+slice.should.have.property 'do' # from uselessJS
