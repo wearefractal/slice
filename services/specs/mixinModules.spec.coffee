@@ -9,8 +9,8 @@ modules = ['useless']
 
 #>> When I pass in some modules
 
-slice = mixinModules modules
+mixinModules modules, (slice) ->
 
 #>> Then 
 
-slice.should.have.property 'do' # from uselessJS
+  slice.should.have.property 'do' # from uselessJS
