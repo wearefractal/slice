@@ -5,7 +5,7 @@ mixinModules = require './services/mixinModules'
 
 Slice = ->
 
-  env = rzr.ENV ? 'production'
+  env = rzr?.ENV ? 'production'
   modules = environments[env].sliceModules
   return slice = mixinModules modules
 
