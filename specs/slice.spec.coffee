@@ -1,22 +1,41 @@
 #>> Setup 
 
-path = require 'path'
 should = require 'should'
 
-#>> Given some globals
+#>> When I create slice with no args
 
-global.rzr = {}
-rzr.ENV = 'production'
-rzr.APP_ROOT = path.resolve __dirname
+try
+  slice = require('../domain/slice')()
 
-#>> When I create slice 
+#>> Then it should throw an error
 
-slice = require '../slice'
+catch err
+  err.message.should.equal 'slice: no dir specified'  
+
+
+
+#>> When I create slice with a dir path
+# default env: 'production'
+
+slice = require('../domain/slice') __dirname
 
 #>> Then 
 
 slice.should.have.property 'do' # from uselessJS
 
-#>> Cleanup
 
-global.rzr = null
+
+#>> Given a global RZR.ENV of 'slice-test'
+
+global.RZR = {}
+global.RZR.ENV = 'slice-test'
+
+#>> When I create slice with a dir path
+
+slice = require('../domain/slice') __dirname
+
+#>> Then 
+
+slice.should.have.property 'load' # from modulate
+
+
