@@ -20,7 +20,7 @@
     
    "devDependencies":{
       "should":"*",
-      "useless":"*",
+      "useless":"*"
    },
 
    "licenses":[
